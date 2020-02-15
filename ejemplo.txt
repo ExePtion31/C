@@ -1,0 +1,110 @@
+//////////////////////// 1 /////////////////////////////
+
+
+using namespace std;
+int main()
+{
+ int vector[100];
+ int aumento;
+ double cantnum;
+ double media=0;
+ double mediatotal=0;
+ 
+ cout <<"Cuantos numeros desea ingresar?: "; cin>>cantnum;
+ 
+ for(aumento=1;aumento<=cantnum;aumento++ ) 
+ {
+  cout <<"Ingrese el valor #" <<aumento <<endl;
+  cin>>vector[aumento];	
+  media=vector[aumento]+media;
+ }
+ mediatotal=media/cantnum;
+ cout 	<<"La media es: " <<mediatotal <<endl;
+ cout <<"Numeros mayores de la media: " <<endl;
+ 
+ for(aumento=1;aumento<=cantnum;aumento++)
+ {
+  if(vector[aumento]>mediatotal)
+   cout <<vector[aumento] <<endl;	
+ }
+}
+
+
+///////////////////////// 2 ///////////////////////
+
+#include <iostream>
+
+using namespace std;
+int main()
+{
+ int vector[100];
+ int cantnum;
+ int aumento;
+ int pares=0;
+ int mayores=0;
+ 
+ cout <<"Cuantos numeos desea ingresar?: "; cin>>cantnum;
+ for(aumento=1;aumento<=cantnum;aumento++ ) 
+ {
+  cout <<"Ingrese el valor #" <<aumento <<endl;
+  cin>>vector[aumento];	
+ }
+ 
+ cout <<"________________________\nCantidad de numeros pares: " <<endl;
+ for(aumento=1;aumento<=cantnum;aumento++ ) 
+ {
+  if(vector[aumento]%2==0)
+   pares++;
+ }
+ cout <<pares;	
+ 
+ cout <<"\nElementos mayores a 100: " <<endl;
+ for(aumento=1;aumento<=cantnum;aumento++ ) 
+ {
+  if(vector[aumento]>100)
+  {
+   mayores++;
+  }
+ }
+ cout <<mayores;	
+}
+
+///////////////////////// 3 ///////////////////////
+
+#include <iostream>
+
+using namespace std;
+int main()
+{
+ double vector[30];
+ double vector2[30];
+ int aumento=0;
+ int aumento2=1;
+ double divisor;
+ 
+ while(aumento<=29)
+ {
+  vector[aumento]=aumento2;	
+  aumento++;
+  aumento2++;
+ }
+ 
+ 
+ cout <<"Vector 1:" <<endl;
+ for(aumento=0;aumento<=29;aumento++)
+ {
+  cout <<"\n" <<aumento <<") " <<vector[aumento];	
+ }
+ 
+ 
+ cout <<"\nIngrese un valor con el que desea dividir: " ; cin>>divisor; 
+ 
+ aumento=0;
+ aumento2=1;
+ while(aumento<=29)
+ {
+  vector2[aumento]=vector[aumento]/divisor;	
+  cout <<"\n" <<aumento <<") " <<vector2[aumento];
+  aumento++;
+ }
+}
